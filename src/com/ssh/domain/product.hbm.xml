@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- hbnate可以根据映射关系生成表 -->
+<hibernate-mapping>
+    <class name="com.ssh.domain.Product" table="product">
+        <id name="pid" column="pid">
+            <generator class="native"></generator><!-- 主键生成规则（本地映射策略） -->
+        </id>
+        <property name="pname" column="pname"></property>
+        <property name="price" column="price"></property>
+    </class>
+</hibernate-mapping>
+
+
+
+
+<!-- 
+hbnate配置文件
+1、数据库连接信息
+2、数据库连接池信息
+3、hbnate属性（如：方言、显示sql语句等）
+4、映射文件加载 -->
